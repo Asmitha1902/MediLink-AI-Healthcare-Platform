@@ -1,0 +1,359 @@
+.hospital-appointments-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.hospital-appointments-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b, #022c22);
+  color: white;
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hospital-logo {
+  width: 70px;
+  height: 70px;
+  background: white;
+  color: #064e3b;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hospital-appointments-sidebar h2 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.hospital-appointments-sidebar p {
+  color: #bbf7d0;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.hospital-appointments-sidebar button {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  background: white;
+  color: #047857;
+  padding: 13px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.hospital-appointments-main {
+  flex: 1;
+  padding: 36px;
+}
+
+.hospital-appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hospital-appointments-header h1 {
+  color: #064e3b;
+  font-size: 34px;
+  margin: 0 0 8px 0;
+  font-weight: 900;
+}
+
+.hospital-appointments-header p {
+  color: #475569;
+  margin: 0;
+  font-weight: 700;
+}
+
+.refresh-appointments-btn {
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+  color: #047857;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.hospital-appointment-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 230px);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.hospital-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #d1fae5;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.hospital-stat-card span {
+  color: #475569;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.hospital-stat-card h3 {
+  color: #064e3b;
+  font-size: 32px;
+  margin: 8px 0 0 0;
+  font-weight: 900;
+}
+
+.hospital-appointment-tabs {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 8px;
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.hospital-appointment-tabs button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: transparent;
+  color: #475569;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.hospital-appointment-tabs button.active {
+  background: #059669;
+  color: white;
+}
+
+.hospital-loading-box,
+.hospital-empty-box {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-weight: 800;
+}
+
+.hospital-empty-box h3 {
+  color: #064e3b;
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.hospital-appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.hospital-appointment-card {
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid #d1fae5;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.appointment-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.appointment-card-top h3 {
+  color: #064e3b;
+  margin: 0 0 5px 0;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.appointment-card-top p {
+  color: #64748b;
+  margin: 0;
+  font-weight: 800;
+}
+
+.status-pending,
+.status-accepted,
+.status-rejected,
+.status-completed,
+.status-cancelled {
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected,
+.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.appointment-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.appointment-details-grid div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.appointment-details-grid span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.appointment-details-grid strong {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.appointment-reason-box,
+.appointment-rejection-box {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.appointment-reason-box {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.appointment-rejection-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.appointment-reason-box span,
+.appointment-rejection-box span {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.appointment-reason-box p,
+.appointment-rejection-box p {
+  margin: 8px 0 0 0;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.appointment-meta {
+  margin-top: 14px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.appointment-meta p {
+  margin: 4px 0;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.accept-appointment-btn,
+.reject-appointment-btn {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.accept-appointment-btn {
+  background: #059669;
+  color: white;
+}
+
+.reject-appointment-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.accept-appointment-btn:disabled,
+.reject-appointment-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .hospital-appointments-page {
+    flex-direction: column;
+  }
+
+  .hospital-appointments-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .hospital-appointments-main {
+    padding: 22px;
+  }
+
+  .hospital-appointments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hospital-appointment-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-appointments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

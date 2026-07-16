@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.doctor-dashboard {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+.doctor-dash-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b, #047857, #022c22);
+  color: white;
+  padding: 32px 22px;
+  text-align: center;
+  position: relative;
+  box-shadow: 12px 0 35px rgba(2, 6, 23, 0.18);
+}
+
+.doctor-dash-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 16px;
+  border-radius: 22px;
+  background: white;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.doctor-dash-sidebar h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.doctor-dash-sidebar p {
+  margin: 8px 0 35px;
+  color: #bbf7d0;
+}
+
+.doctor-dash-sidebar button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.doctor-dash-sidebar button:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.doctor-side-active {
+  background: white !important;
+  color: #047857 !important;
+}
+
+.doctor-logout-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 22px;
+  width: calc(100% - 44px) !important;
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+}
+
+.doctor-dash-main {
+  flex: 1;
+  padding: 42px;
+}
+
+.doctor-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.doctor-dash-header h1 {
+  font-size: 34px;
+  color: #064e3b;
+  font-weight: 900;
+}
+
+.doctor-dash-header p {
+  margin-top: 8px;
+  color: #475569;
+}
+
+.doctor-status-card {
+  min-width: 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09);
+}
+
+.doctor-status-card p {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.doctor-status-card h3 {
+  margin-top: 8px;
+  color: #047857;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+}
+
+.doctor-profile-card,
+.doctor-password-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.09);
+  border: 1px solid #e2e8f0;
+  animation: fadeUp 0.7s ease;
+}
+
+.doctor-profile-card h2,
+.doctor-password-card h2 {
+  color: #064e3b;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.doctor-avatar {
+  width: 95px;
+  height: 95px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  margin-bottom: 18px;
+}
+
+.doctor-profile-card h3 {
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.doctor-profile-card > p {
+  margin: 8px 0 22px;
+  color: #047857;
+  font-weight: 800;
+}
+
+.doctor-info-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.doctor-info-list div {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.doctor-info-list span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.doctor-info-list b {
+  display: block;
+  margin-top: 6px;
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.doctor-password-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.doctor-form-group {
+  margin-bottom: 18px;
+}
+
+.doctor-form-group label {
+  display: block;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.doctor-form-group input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #cbd5e1;
+  border-radius: 13px;
+  padding: 0 15px;
+  outline: none;
+  font-size: 15px;
+}
+
+.doctor-form-group input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.13);
+}
+
+.doctor-password-card button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #047857, #064e3b);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .doctor-dashboard {
+    flex-direction: column;
+  }
+
+  .doctor-dash-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .doctor-logout-btn {
+    position: static;
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .doctor-dash-main {
+    padding: 24px;
+  }
+
+  .doctor-dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-info-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doctor-status-select {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-weight: 800;
+  outline: none;
+  cursor: pointer;
+}
+
+.doctor-status-select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.13);
+}
+
+
+.doctor-quick-actions {
+  margin-bottom: 28px;
+}
+
+.doctor-quick-card {
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid #d1fae5;
+}
+
+.doctor-quick-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: #ecfdf5;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.doctor-quick-card h3 {
+  color: #064e3b;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.doctor-quick-card p {
+  color: #64748b;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.doctor-quick-card button {
+  margin-left: auto;
+  border: none;
+  border-radius: 14px;
+  background: #047857;
+  color: white;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .doctor-quick-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doctor-quick-card button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.doctor-dash-sidebar button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.doctor-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 20px;
+}

@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resources-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+.resources-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #062b4f, #0f3d68, #08233e);
+  color: white;
+  padding: 34px 24px;
+  text-align: center;
+  box-shadow: 12px 0 35px rgba(2, 6, 23, 0.18);
+}
+
+.resources-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  background: white;
+  color: #0f3d68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.resources-sidebar h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.resources-sidebar p {
+  margin-top: 8px;
+  color: #bfdbfe;
+}
+
+.resources-sidebar span {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-weight: 800;
+}
+
+.resources-sidebar button {
+  width: 100%;
+  margin-top: 330px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #0f3d68;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resources-sidebar button:hover {
+  transform: translateY(-3px);
+}
+
+.resources-main {
+  flex: 1;
+  padding: 42px;
+  animation: fadeUp 0.7s ease;
+}
+
+.resources-header {
+  margin-bottom: 28px;
+}
+
+.resources-header h1 {
+  font-size: 34px;
+  color: #083763;
+  font-weight: 900;
+}
+
+.resources-header p {
+  margin-top: 8px;
+  color: #475569;
+}
+
+.resources-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.resource-summary-card {
+  background: white;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.resource-summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
+}
+
+.resource-summary-card div {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.resource-summary-card h3 {
+  font-size: 30px;
+  color: #083763;
+  font-weight: 900;
+}
+
+.resource-summary-card p {
+  margin-top: 5px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.resources-form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.09);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.resources-form-card h2 {
+  color: #083763;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.resources-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.resource-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.resource-form-group label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.resource-form-group input {
+  height: 50px;
+  border: 1px solid #cbd5e1;
+  border-radius: 13px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.resource-form-group input:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+}
+
+.update-resources-btn {
+  margin-top: 26px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #0f4c81, #0b3760);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.update-resources-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(15, 76, 129, 0.28);
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .resources-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .resources-page {
+    flex-direction: column;
+  }
+
+  .resources-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .resources-sidebar button {
+    margin-top: 30px;
+  }
+
+  .resources-main {
+    padding: 24px;
+  }
+
+  .resources-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .resources-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

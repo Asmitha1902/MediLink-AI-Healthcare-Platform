@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.upload-report-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+/* Sidebar */
+
+.upload-report-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b, #047857, #022c22);
+  color: white;
+  padding: 34px 24px;
+  text-align: center;
+  box-shadow: 12px 0 35px rgba(2, 6, 23, 0.18);
+}
+
+.upload-report-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  background: white;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.upload-report-sidebar h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.upload-report-sidebar p {
+  margin-top: 8px;
+  color: #bbf7d0;
+  font-weight: 600;
+}
+
+.upload-report-sidebar button {
+  width: 100%;
+  margin-top: 360px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #047857;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Main Content */
+
+.upload-report-main {
+  flex: 1;
+  padding: 42px;
+}
+
+.upload-report-header {
+  margin-bottom: 26px;
+}
+
+.upload-report-header h1 {
+  font-size: 34px;
+  color: #064e3b;
+  font-weight: 900;
+}
+
+.upload-report-header p {
+  margin-top: 8px;
+  color: #475569;
+  font-weight: 600;
+  max-width: 720px;
+}
+
+/* Upload Card */
+
+.upload-report-card {
+  max-width: 760px;
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.09);
+  border: 1px solid #e2e8f0;
+}
+
+/* Form */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #064e3b;
+  font-weight: 900;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 13px;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.file-help {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Selected File */
+
+.selected-file-box {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 22px;
+}
+
+.selected-file-box p {
+  color: #047857;
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.selected-file-box h4 {
+  color: #064e3b;
+  font-size: 16px;
+  font-weight: 900;
+  word-break: break-word;
+}
+
+/* Button */
+
+.upload-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(5, 150, 105, 0.25);
+}
+
+.upload-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .upload-report-page {
+    flex-direction: column;
+  }
+
+  .upload-report-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .upload-report-sidebar button {
+    margin-top: 30px;
+  }
+
+  .upload-report-main {
+    padding: 24px;
+  }
+
+  .upload-report-card {
+    padding: 22px;
+  }
+
+  .upload-report-header h1 {
+    font-size: 28px;
+  }
+}

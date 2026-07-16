@@ -1,0 +1,252 @@
+.doctor-appointments-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.doctor-appointments-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b, #022c22);
+  color: white;
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-appointments-logo {
+  width: 70px;
+  height: 70px;
+  background: white;
+  color: #064e3b;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.doctor-appointments-sidebar h2 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.doctor-appointments-sidebar p {
+  color: #bbf7d0;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.doctor-appointments-sidebar button {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  background: white;
+  color: #047857;
+  padding: 13px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.doctor-appointments-main {
+  flex: 1;
+  padding: 36px;
+}
+
+.doctor-appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.doctor-appointments-header h1 {
+  color: #064e3b;
+  font-size: 34px;
+  margin: 0 0 8px 0;
+  font-weight: 900;
+}
+
+.doctor-appointments-header p {
+  color: #475569;
+  margin: 0;
+  font-weight: 700;
+}
+
+.doctor-refresh-btn {
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+  color: #047857;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.doctor-appointments-loading,
+.doctor-appointments-empty {
+  background: white;
+  border-radius: 22px;
+  padding: 42px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.doctor-appointments-empty h3 {
+  color: #064e3b;
+  font-size: 25px;
+  margin: 0 0 8px 0;
+  font-weight: 900;
+}
+
+.doctor-appointments-empty p {
+  color: #475569;
+  font-weight: 700;
+}
+
+.doctor-appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.doctor-appointment-card {
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid #d1fae5;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.doctor-appointment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.doctor-appointment-top h3 {
+  color: #064e3b;
+  margin: 0 0 5px 0;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.doctor-appointment-top p {
+  color: #64748b;
+  margin: 0;
+  font-weight: 800;
+}
+
+.doctor-appointment-status {
+  background: #dcfce7;
+  color: #166534;
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.doctor-appointment-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.doctor-appointment-details div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.doctor-appointment-details span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.doctor-appointment-details strong {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.doctor-appointment-reason {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.doctor-appointment-reason span {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.doctor-appointment-reason p {
+  margin: 8px 0 0 0;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.doctor-appointment-actions {
+  margin-top: 18px;
+}
+
+.doctor-complete-btn {
+  width: 100%;
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.doctor-complete-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .doctor-appointments-page {
+    flex-direction: column;
+  }
+
+  .doctor-appointments-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .doctor-appointments-main {
+    padding: 22px;
+  }
+
+  .doctor-appointments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .doctor-appointments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-appointment-details {
+    grid-template-columns: 1fr;
+  }
+}

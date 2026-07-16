@@ -1,0 +1,293 @@
+.patient-access-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+}
+
+.access-sidebar {
+  width: 280px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b, #047857);
+  color: white;
+  padding: 30px 22px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.access-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: white;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.access-sidebar h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.access-sidebar p {
+  color: #bbf7d0;
+  margin-top: 6px;
+  margin-bottom: 30px;
+}
+
+.access-sidebar button {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 14px;
+  background: white;
+  color: #047857;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.access-main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  padding: 32px;
+}
+
+.access-header {
+  background: white;
+  padding: 26px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.access-header h1 {
+  color: #064e3b;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.access-header p {
+  color: #64748b;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.access-header button {
+  border: none;
+  border-radius: 14px;
+  background: #047857;
+  color: white;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.access-request-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.access-request-card {
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.request-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.doctor-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #ecfdf5;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.request-top h3 {
+  color: #064e3b;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.request-top p {
+  color: #047857;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.status-pending,
+.status-approved,
+.status-rejected {
+  margin-left: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.request-message {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.request-message p {
+  color: #064e3b;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.request-details {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.request-details p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.request-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.request-actions button {
+  height: 44px;
+  border: none;
+  border-radius: 13px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background: #047857;
+}
+
+.reject-btn {
+  background: #dc2626;
+}
+
+.request-response-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.request-response-box p {
+  color: #334155;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.request-response-box span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.access-empty-box {
+  min-height: 320px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 28px;
+}
+
+.access-empty-box div {
+  font-size: 48px;
+}
+
+.access-empty-box p {
+  color: #334155;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.access-empty-box span {
+  color: #64748b;
+  font-weight: 600;
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .patient-access-page {
+    flex-direction: column;
+  }
+
+  .access-sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .access-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .access-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .access-request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .request-actions {
+    grid-template-columns: 1fr;
+  }
+}
